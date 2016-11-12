@@ -46,15 +46,22 @@ public class PlayerPhysic : MonoBehaviour {
 	void FixedUpdate(){
 		rayLenght = innerThrashhold + outerThrashhold;
 
-		checkGroundCollision ();
+        checkGroundCollision();
 		checkLeftCollision ();
 		checkCollisionRight ();
 		checkCollisionTop ();
 
 
+        if (hasCollisionBottom)
+            this.transform.parent = bottomCollisionObject.transform;
+
+        else
+            this.transform.parent = null;
 
 
-		currentVelocity += Vector2.down * 9.81f * Time.fixedDeltaTime;
+
+
+        currentVelocity += Vector2.down * 9.81f * Time.fixedDeltaTime;
 
 		handleCollision ();
 
@@ -100,6 +107,12 @@ public class PlayerPhysic : MonoBehaviour {
 		Debug.DrawRay(transform.position + new Vector3(-0.0f,innerThrashhold,0), Vector2.down *rayLenght);
 		Debug.DrawRay(transform.position + new Vector3(+0.45f,innerThrashhold,0), Vector2.down *rayLenght);
 
+        if(currentVelocity.y > 0)
+        {
+            hasCollisionBottom = false;
+            return;
+        }
+
 		characterHit = Physics2D.Raycast (transform.position+new Vector3(-0.0f,innerThrashhold,0), Vector2.down, rayLenght, collidesWith);
 		if (characterHit.collider == null) {
 			characterHit = Physics2D.Raycast (transform.position+new Vector3(-0.45f,innerThrashhold,0), Vector2.down, rayLenght,collidesWith);
@@ -140,7 +153,8 @@ public class PlayerPhysic : MonoBehaviour {
 
 		hasCollisionLeft = true;
 		leftCollisionObject = characterHit.collider.gameObject;
-	}
+        transform.position = new Vector3(characterHit.point.x+0.5f, transform.position.y, 0);
+    }
 
 	private void checkCollisionRight(){
 
@@ -167,15 +181,15 @@ public class PlayerPhysic : MonoBehaviour {
 	}
 
 	private void checkCollisionTop(){
-		Debug.DrawRay(transform.position + new Vector3(-0.5f,1.9f,0), Vector2.up *rayLenght);
+		Debug.DrawRay(transform.position + new Vector3(-0.4f,1.9f,0), Vector2.up *rayLenght);
 		Debug.DrawRay(transform.position + new Vector3(0.0f,1.9f,0), Vector2.up *rayLenght);
-		Debug.DrawRay(transform.position + new Vector3(0.5f,1.9f,0), Vector2.up *rayLenght);
+		Debug.DrawRay(transform.position + new Vector3(0.4f,1.9f,0), Vector2.up *rayLenght);
 
-		characterHit = Physics2D.Raycast (transform.position + new Vector3(-0.5f,1.9f,0), Vector2.up, rayLenght, collidesWith);
+		characterHit = Physics2D.Raycast (transform.position + new Vector3(-0.0f,1.9f,0), Vector2.up, rayLenght, collidesWith);
 		if (characterHit.collider == null) {
-			characterHit = Physics2D.Raycast (transform.position+new Vector3(0f,1.9f,0), Vector2.up, rayLenght,collidesWith);
+			characterHit = Physics2D.Raycast (transform.position+new Vector3(0.4f,1.9f,0), Vector2.up, rayLenght,collidesWith);
 			if (characterHit.collider == null) {
-				characterHit = Physics2D.Raycast (transform.position+new Vector3(0.5f,1.9f,0), Vector2.up, rayLenght,collidesWith);
+				characterHit = Physics2D.Raycast (transform.position+new Vector3(-0.4f,1.9f,0), Vector2.up, rayLenght,collidesWith);
 				if (characterHit.collider == null) {
 					hasCollisionTop = false;
 					topCollisionObject = null;
