@@ -1,0 +1,160 @@
+fileFormatVersion: 2
+guid: d26cdffde03276e4db47ef326417a1ec
+timeCreated: 1478982919
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: arm_left
+    100002: arm_right
+    100004: body
+    100006: //RootNode
+    100008: character_geo
+    100010: character_rig
+    100012: head
+    100014: hip
+    100016: leg_left
+    100018: leg_right
+    100020: root
+    100022: arm_low_left
+    100024: arm_low_right
+    100026: arm_up_left
+    100028: arm_up_right
+    100030: foot_left
+    100032: foot_right
+    100034: hand_left
+    100036: hand_right
+    100038: leg_left_ikHandle
+    100040: leg_left_ikTarget
+    100042: leg_low_left
+    100044: leg_low_right
+    100046: leg_right_ikHandle
+    100048: leg_right_ikTarget
+    100050: leg_up_left
+    100052: leg_up_right
+    100054: arm_low_left_001
+    100056: arm_low_right_001
+    100058: arm_up_left_001
+    100060: arm_up_right_001
+    100062: head1
+    100064: head2
+    100066: leg_low_left_001
+    100068: leg_low_right_001
+    100070: leg_up_left_001
+    100072: leg_up_right_001
+    100074: spine1
+    100076: spine2
+    100078: spine3
+    100080: ragdollBones
+    400000: arm_left
+    400002: arm_right
+    400004: body
+    400006: //RootNode
+    400008: character_geo
+    400010: character_rig
+    400012: head
+    400014: hip
+    400016: leg_left
+    400018: leg_right
+    400020: root
+    400022: arm_low_left
+    400024: arm_low_right
+    400026: arm_up_left
+    400028: arm_up_right
+    400030: foot_left
+    400032: foot_right
+    400034: hand_left
+    400036: hand_right
+    400038: leg_left_ikHandle
+    400040: leg_left_ikTarget
+    400042: leg_low_left
+    400044: leg_low_right
+    400046: leg_right_ikHandle
+    400048: leg_right_ikTarget
+    400050: leg_up_left
+    400052: leg_up_right
+    400054: arm_low_left_001
+    400056: arm_low_right_001
+    400058: arm_up_left_001
+    400060: arm_up_right_001
+    400062: head1
+    400064: head2
+    400066: leg_low_left_001
+    400068: leg_low_right_001
+    400070: leg_up_left_001
+    400072: leg_up_right_001
+    400074: spine1
+    400076: spine2
+    400078: spine3
+    400080: ragdollBones
+    2300000: character_geo
+    3300000: character_geo
+    4300000: character_geo
+    7400000: Default Take
+    7400002: run
+    9500000: //RootNode
+    13700000: character_geo
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
