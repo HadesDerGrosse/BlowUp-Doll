@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour {
 		physics.Velocity =
 			new Vector2(
 				physics.Velocity.x,
-				Mathf.Sqrt(2*-Physics2D.gravity.y*playerProperties.jumpHeight) * playerInput.Jump
+				Mathf.Sqrt(2*9.81f*playerProperties.jumpHeight) * playerInput.Jump
 			);
 
 	}
