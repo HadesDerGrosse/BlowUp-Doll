@@ -52,8 +52,11 @@ public class PlayerPhysic : MonoBehaviour {
 		checkCollisionTop ();
 
 
-        if (hasCollisionBottom)
-            this.transform.parent = bottomCollisionObject.transform;
+		if (hasCollisionBottom) {
+			this.transform.parent = bottomCollisionObject.transform;
+			this.transform.rotation = Quaternion.Euler (0, 0, 0);
+
+		}
 
         else
             this.transform.parent = null;
@@ -177,6 +180,7 @@ public class PlayerPhysic : MonoBehaviour {
 
 		hasCollisionRight = true;
 		rightCollisionObject = characterHit.collider.gameObject;
+		transform.position = new Vector3(characterHit.point.x-0.5f, transform.position.y, 0);
 
 	}
 
