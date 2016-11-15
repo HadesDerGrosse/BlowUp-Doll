@@ -17,7 +17,6 @@ public class BombAwarer : MonoBehaviour
 	void Update ()
 	{
 		foreach (RaycastHit2D bomb in Physics2D.CircleCastAll (transform.position, radius, Vector2.zero, 0, mask)) {
-			Debug.Log ("EXPLODE");
 			bomb.collider.gameObject.GetComponent<Bomb> ().trigger ();
 		}
 	}

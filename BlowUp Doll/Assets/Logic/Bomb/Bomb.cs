@@ -34,10 +34,18 @@ public class Bomb : MonoBehaviour {
 		RaycastHit2D[] hits = Physics2D.CircleCastAll (transform.position, radius, Vector2.zero, 0, targetMask);
 
 		foreach (RaycastHit2D target in hits) {
-			Rigidbody2D newRigidbody = target.collider.gameObject.AddComponent<Rigidbody2D> ();
+
+
+			Rigidbody2D newRigidbody =
+				(target.collider.GetComponent<Rigidbody2D>() == null)?
+				target.collider.gameObject.AddComponent<Rigidbody2D> ():
+				target.collider.GetComponent<Rigidbody2D>();
+			
 			newRigidbody.freezeRotation = true;
 			newRigidbody.AddForce ((target.transform.position - transform.position).normalized * power);
 		}
+
+		Destroy (this.gameObject);
 
 	}
 }
