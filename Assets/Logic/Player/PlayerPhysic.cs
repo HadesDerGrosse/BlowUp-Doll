@@ -13,6 +13,7 @@ public class PlayerPhysic : MonoBehaviour {
 	public bool hasCollisionRight;
 	public bool hasCollisionLeft;
 	public bool hasCollisionTop;
+    public float playerGravity = 10;
 
 	public GameObject leftCollisionObject;
 	public GameObject rightCollisionObject;
@@ -64,7 +65,7 @@ public class PlayerPhysic : MonoBehaviour {
 
 
 
-        currentVelocity += Vector2.down * 9.81f * Time.fixedDeltaTime;
+        currentVelocity += Vector2.down * playerGravity * Time.fixedDeltaTime;
 
 		handleCollision ();
 

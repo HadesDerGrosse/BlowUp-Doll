@@ -32,6 +32,8 @@ public class PlayerMovement : MonoBehaviour {
 		playerInput 		= GetComponent<PlayerInputHandler> ();
 		playerProperties 	= GetComponent<PlayerProperties> ();
 		physics 			= GetComponent<PlayerPhysic> ();
+
+        Time.timeScale = 0.5f;
 	}
 
 	// Update is called once per frame
@@ -50,15 +52,17 @@ public class PlayerMovement : MonoBehaviour {
 
 	private void Jump(){
 
-		if (!physics.hasCollisionBottom)
-			return;
+        if (playerInput.Jump == 0)
+            return;
 
-
-		physics.Velocity =
-			new Vector2(
-				physics.Velocity.x,
-				Mathf.Sqrt(2*9.81f*playerProperties.jumpHeight) * playerInput.Jump
-			);
+        if(physics.hasCollisionBottom)
+        {
+            physics.Velocity =
+                new Vector2(
+                    physics.Velocity.x,
+                    Mathf.Sqrt(2 * physics.playerGravity * playerProperties.jumpHeight) * playerInput.Jump
+                );
+        }
 
 	}
 
