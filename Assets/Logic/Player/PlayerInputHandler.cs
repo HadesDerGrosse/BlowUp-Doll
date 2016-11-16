@@ -5,9 +5,11 @@ public class PlayerInputHandler : MonoBehaviour {
 
     private float right;
     private float jump;
+    private float dive;
 
     public float Right { get { return right; } }
     public float Jump  { get { return jump; } }
+    public float Dive { get { return dive; } }
 
 
 	// Use this for initialization
@@ -20,7 +22,7 @@ public class PlayerInputHandler : MonoBehaviour {
 
         right = Input.GetAxis("Horizontal");
         jump = Input.GetAxis("Jump");
-        
+        dive = Input.GetAxisRaw("Vertical");
 
 	}
 }

@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour {
 		detectMovement ();
 		Jump ();
 		Run ();
+        Dive();
 
 		handleMovement ();
 	}
@@ -83,7 +84,13 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 
-
+    private void Dive()
+    {
+        if (!physics.hasCollisionBottom && playerInput.Dive < 0)
+        {
+            physics.AddForce(new Vector2(0,playerProperties.diveStrength));
+        }
+    }
 
 
 	private void detectMovement(){

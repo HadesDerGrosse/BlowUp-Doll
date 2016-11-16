@@ -6,5 +6,6 @@ public class PlayerProperties : MonoBehaviour
 	public float jumpHeight;
 	public float runSpeed;
 	public float slideGravity;
+    public float diveStrength;
 }
 

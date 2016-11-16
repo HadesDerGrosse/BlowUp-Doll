@@ -44,7 +44,7 @@ public class PlayerPhysic : MonoBehaviour {
 	}
 
 
-	void FixedUpdate(){
+	void Update(){
 		rayLenght = innerThrashhold + outerThrashhold;
 
         checkGroundCollision();
@@ -65,11 +65,13 @@ public class PlayerPhysic : MonoBehaviour {
 
 
 
-        currentVelocity += Vector2.down * playerGravity * Time.fixedDeltaTime;
+        currentForce += Vector2.down * playerGravity;
+        currentVelocity += currentForce * Time.deltaTime;
+        Debug.Log(currentForce);
 
 		handleCollision ();
 
-		transform.position += new Vector3(currentVelocity.x, currentVelocity.y,0)*Time.fixedDeltaTime;
+		transform.position += new Vector3(currentVelocity.x, currentVelocity.y,0)*Time.deltaTime;
 		currentForce.Set (0, 0);
 
 
