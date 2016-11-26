@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerAnimation : MonoBehaviour {
 
     public PlayerMovement move;
+    public Animator anim;
 
 	// Use this for initialization
 	void Start () {
@@ -12,12 +13,36 @@ public class PlayerAnimation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (move.movementType == PlayerMovement.MovementTyps.RUN_RIGHT)
+        //SPRITE FLIPPING
+        if (move.movementType == PlayerMovement.MovementTyps.RUN_RIGHT
+            ||move.movementType == PlayerMovement.MovementTyps.JUMP_RIGHT
+            || move.movementType == PlayerMovement.MovementTyps.FALL_RIGHT
+            )
             transform.localScale = new Vector3(-1, 1, 1);
 
-        else if(move.movementType == PlayerMovement.MovementTyps.RUN_LEFT)
+        else if(move.movementType == PlayerMovement.MovementTyps.RUN_LEFT
+            || move.movementType == PlayerMovement.MovementTyps.JUMP_LEFT
+            || move.movementType == PlayerMovement.MovementTyps.FALL_LEFT
+            )
             transform.localScale = Vector3.one;
 
-        //Debug.Log(transform.localScale.x);
+        //SETTING BOOLS TO ANIMATOR
+        anim.SetBool("jump", (move.movementType == PlayerMovement.MovementTyps.JUMP
+            || move.movementType == PlayerMovement.MovementTyps.JUMP_RIGHT
+            || move.movementType == PlayerMovement.MovementTyps.JUMP_LEFT)
+            );
+
+
+
+        anim.SetBool("standing", (move.movementType == PlayerMovement.MovementTyps.RUN_LEFT
+            || move.movementType == PlayerMovement.MovementTyps.RUN_RIGHT
+            || move.movementType == PlayerMovement.MovementTyps.STAND)
+            );
+
+        
+        anim.SetBool("jump", (move.movementType == PlayerMovement.MovementTyps.JUMP
+            || move.movementType == PlayerMovement.MovementTyps.JUMP_LEFT
+            || move.movementType == PlayerMovement.MovementTyps.JUMP_RIGHT)
+            );
 	}
 }

@@ -129,6 +129,8 @@ ModelImporter:
     400120: ragdollBones_end
     4300000: character_geo
     7400000: character_rig|run
+    7400002: character_rig|jump
+    7400004: character_rig|fall
     9500000: //RootNode
     13700000: character_geo
   materials:
@@ -138,7 +140,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleCurves: 1
+    resampleRotations: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
@@ -157,6 +159,238 @@ ModelImporter:
       takeName: character_rig|run
       firstFrame: 0
       lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: character_geo
+        weight: 1
+      - path: character_rig
+        weight: 1
+      - path: character_rig/ikBones
+        weight: 1
+      - path: character_rig/ikBones/leg_left_ikHandle
+        weight: 1
+      - path: character_rig/ikBones/leg_left_ikHandle/leg_left_ikHandle_end
+        weight: 1
+      - path: character_rig/ikBones/leg_left_ikTarget
+        weight: 1
+      - path: character_rig/ikBones/leg_left_ikTarget/leg_left_ikTarget_end
+        weight: 1
+      - path: character_rig/ikBones/leg_right_ikHandle
+        weight: 1
+      - path: character_rig/ikBones/leg_right_ikHandle/leg_right_ikHandle_end
+        weight: 1
+      - path: character_rig/ikBones/leg_right_ikTarget
+        weight: 1
+      - path: character_rig/ikBones/leg_right_ikTarget/leg_right_ikTarget_end
+        weight: 1
+      - path: character_rig/root
+        weight: 1
+      - path: character_rig/root/hip
+        weight: 1
+      - path: character_rig/root/hip/leg_up_left
+        weight: 1
+      - path: character_rig/root/hip/leg_up_left/leg_up_left.001
+        weight: 1
+      - path: character_rig/root/hip/leg_up_left/leg_up_left.001/leg_low_left
+        weight: 1
+      - path: character_rig/root/hip/leg_up_left/leg_up_left.001/leg_low_left/leg_low_left.001
+        weight: 1
+      - path: character_rig/root/hip/leg_up_left/leg_up_left.001/leg_low_left/leg_low_left.001/foot_left
+        weight: 1
+      - path: character_rig/root/hip/leg_up_left/leg_up_left.001/leg_low_left/leg_low_left.001/foot_left/foot_left_end
+        weight: 1
+      - path: character_rig/root/hip/leg_up_right
+        weight: 1
+      - path: character_rig/root/hip/leg_up_right/leg_up_right.001
+        weight: 1
+      - path: character_rig/root/hip/leg_up_right/leg_up_right.001/leg_low_right
+        weight: 1
+      - path: character_rig/root/hip/leg_up_right/leg_up_right.001/leg_low_right/leg_low_right.001
+        weight: 1
+      - path: character_rig/root/hip/leg_up_right/leg_up_right.001/leg_low_right/leg_low_right.001/foot_right
+        weight: 1
+      - path: character_rig/root/hip/leg_up_right/leg_up_right.001/leg_low_right/leg_low_right.001/foot_right/foot_right_end
+        weight: 1
+      - path: character_rig/root/hip/spine1
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_left
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_left/arm_up_left.001
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_left/arm_up_left.001/arm_low_left
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_left/arm_up_left.001/arm_low_left/arm_low_left.001
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_left/arm_up_left.001/arm_low_left/arm_low_left.001/hand_left
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_left/arm_up_left.001/arm_low_left/arm_low_left.001/hand_left/hand_left_end
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_right
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_right/arm_up_right.001
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_right/arm_up_right.001/arm_low_right
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_right/arm_up_right.001/arm_low_right/arm_low_right.001
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_right/arm_up_right.001/arm_low_right/arm_low_right.001/hand_right
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_right/arm_up_right.001/arm_low_right/arm_low_right.001/hand_right/hand_right_end
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/head1
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/head1/head2
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/head1/head2/head2_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: character_rig|jump
+      takeName: character_rig|jump
+      firstFrame: 0
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: character_geo
+        weight: 1
+      - path: character_rig
+        weight: 1
+      - path: character_rig/ikBones
+        weight: 1
+      - path: character_rig/ikBones/leg_left_ikHandle
+        weight: 1
+      - path: character_rig/ikBones/leg_left_ikHandle/leg_left_ikHandle_end
+        weight: 1
+      - path: character_rig/ikBones/leg_left_ikTarget
+        weight: 1
+      - path: character_rig/ikBones/leg_left_ikTarget/leg_left_ikTarget_end
+        weight: 1
+      - path: character_rig/ikBones/leg_right_ikHandle
+        weight: 1
+      - path: character_rig/ikBones/leg_right_ikHandle/leg_right_ikHandle_end
+        weight: 1
+      - path: character_rig/ikBones/leg_right_ikTarget
+        weight: 1
+      - path: character_rig/ikBones/leg_right_ikTarget/leg_right_ikTarget_end
+        weight: 1
+      - path: character_rig/root
+        weight: 1
+      - path: character_rig/root/hip
+        weight: 1
+      - path: character_rig/root/hip/leg_up_left
+        weight: 1
+      - path: character_rig/root/hip/leg_up_left/leg_up_left.001
+        weight: 1
+      - path: character_rig/root/hip/leg_up_left/leg_up_left.001/leg_low_left
+        weight: 1
+      - path: character_rig/root/hip/leg_up_left/leg_up_left.001/leg_low_left/leg_low_left.001
+        weight: 1
+      - path: character_rig/root/hip/leg_up_left/leg_up_left.001/leg_low_left/leg_low_left.001/foot_left
+        weight: 1
+      - path: character_rig/root/hip/leg_up_left/leg_up_left.001/leg_low_left/leg_low_left.001/foot_left/foot_left_end
+        weight: 1
+      - path: character_rig/root/hip/leg_up_right
+        weight: 1
+      - path: character_rig/root/hip/leg_up_right/leg_up_right.001
+        weight: 1
+      - path: character_rig/root/hip/leg_up_right/leg_up_right.001/leg_low_right
+        weight: 1
+      - path: character_rig/root/hip/leg_up_right/leg_up_right.001/leg_low_right/leg_low_right.001
+        weight: 1
+      - path: character_rig/root/hip/leg_up_right/leg_up_right.001/leg_low_right/leg_low_right.001/foot_right
+        weight: 1
+      - path: character_rig/root/hip/leg_up_right/leg_up_right.001/leg_low_right/leg_low_right.001/foot_right/foot_right_end
+        weight: 1
+      - path: character_rig/root/hip/spine1
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_left
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_left/arm_up_left.001
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_left/arm_up_left.001/arm_low_left
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_left/arm_up_left.001/arm_low_left/arm_low_left.001
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_left/arm_up_left.001/arm_low_left/arm_low_left.001/hand_left
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_left/arm_up_left.001/arm_low_left/arm_low_left.001/hand_left/hand_left_end
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_right
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_right/arm_up_right.001
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_right/arm_up_right.001/arm_low_right
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_right/arm_up_right.001/arm_low_right/arm_low_right.001
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_right/arm_up_right.001/arm_low_right/arm_low_right.001/hand_right
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/arm_up_right/arm_up_right.001/arm_low_right/arm_low_right.001/hand_right/hand_right_end
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/head1
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/head1/head2
+        weight: 1
+      - path: character_rig/root/hip/spine1/spine2/spine3/head1/head2/head2_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: character_rig|fall
+      takeName: character_rig|fall
+      firstFrame: 0
+      lastFrame: 8
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

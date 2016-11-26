@@ -23,7 +23,7 @@ public class PlayerPhysic : MonoBehaviour {
 
 
 
-	Rigidbody2D rigidbody;
+	Rigidbody2D rbody;
 	private Vector2 currentForce;
 	private Vector2 currentVelocity;
 
@@ -35,8 +35,8 @@ public class PlayerPhysic : MonoBehaviour {
 
 	void Awake(){
 
-		rigidbody = GetComponent<Rigidbody2D> ();
-	}
+		rbody = GetComponent<Rigidbody2D> ();
+    }
 
 	// Use this for initialization
 	void Start () {
@@ -67,7 +67,7 @@ public class PlayerPhysic : MonoBehaviour {
 
         currentForce += Vector2.down * playerGravity;
         currentVelocity += currentForce * Time.deltaTime;
-        Debug.Log(currentForce);
+        //Debug.Log(currentForce);
 
 		handleCollision ();
 

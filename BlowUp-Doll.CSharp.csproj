@@ -65,10 +65,12 @@
   <ItemGroup>
     <Compile Include="Assets\Logic\Bomb\Bomb.cs" />
     <Compile Include="Assets\Logic\Camera\CameraMovement.cs" />
+    <Compile Include="Assets\Logic\Level\GameManager.cs" />
     <Compile Include="Assets\Logic\Level\LevelEnder.cs" />
     <Compile Include="Assets\Logic\Player\BombAwarer.cs" />
     <Compile Include="Assets\Logic\Player\PlayerAnimation.cs" />
     <Compile Include="Assets\Logic\Player\PlayerInputHandler.cs" />
+    <Compile Include="Assets\Logic\Player\PlayerKiller.cs" />
     <Compile Include="Assets\Logic\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Logic\Player\PlayerPhysic.cs" />
     <Compile Include="Assets\Logic\Player\PlayerProperties.cs" />
