@@ -40,9 +40,9 @@ public class PlayerAnimation : MonoBehaviour {
             );
 
         
-        anim.SetBool("jump", (move.movementType == PlayerMovement.MovementTyps.JUMP
-            || move.movementType == PlayerMovement.MovementTyps.JUMP_LEFT
-            || move.movementType == PlayerMovement.MovementTyps.JUMP_RIGHT)
+        anim.SetBool("fall", (move.movementType == PlayerMovement.MovementTyps.FALL
+            || move.movementType == PlayerMovement.MovementTyps.FALL_LEFT
+            || move.movementType == PlayerMovement.MovementTyps.FALL_RIGHT)
             );
 	}
 }

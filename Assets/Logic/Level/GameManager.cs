@@ -5,6 +5,8 @@ public class GameManager : MonoBehaviour {
 
     public Canvas startUI;
 
+    private static bool foerst = true;
+
     public delegate void StartEvent();
     public delegate void EndEvent(bool won);
 
@@ -17,10 +19,17 @@ public class GameManager : MonoBehaviour {
         startGame += StartGame;
     }
 
+    void Start()
+    {
+        if (!foerst)
+            TriggerStartGame();
+    }
+
     private void StartGame()
     {
         Time.timeScale = 0.5f;
         startUI.gameObject.SetActive(false);
+        foerst = false;
     }
 
     private void EndGame()
@@ -30,13 +39,19 @@ public class GameManager : MonoBehaviour {
     }
 
 
-    public void TriggerStartGame()
+    public static void TriggerStartGame()
     {
         startGame();
     }
 
-    public void TriggerEndGame(bool won)
+    public static void TriggerEndGame(bool won)
     {
         endGame(won);
+    }
+
+    void OnDestroy()
+    {
+        startGame = null;
+        endGame = null;
     }
 }
