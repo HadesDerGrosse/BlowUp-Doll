@@ -6,6 +6,8 @@ public class Bomb : MonoBehaviour {
 	public float radius;
 	public float power;
 	public LayerMask targetMask;
+    public GameObject explosion;
+    public float delay = 0.5f;
 
 
 	private bool isExploded = false;
@@ -23,11 +25,18 @@ public class Bomb : MonoBehaviour {
 
 	public void trigger(){
 		if (!isExploded) {
-			isExploded = true;
-			explode ();
-		}
+            StartCoroutine(Wait(delay * Time.timeScale));
 
+            this.GetComponent<Animator>().SetTrigger("trigger");
+            isExploded = true;
+		}
 	}
+
+    private IEnumerator Wait(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        explode();
+    }
 
 	public void explode(){
 
@@ -42,10 +51,18 @@ public class Bomb : MonoBehaviour {
 				target.collider.GetComponent<Rigidbody2D>();
 			
 			newRigidbody.freezeRotation = true;
-			newRigidbody.AddForce ((target.transform.position - transform.position).normalized * power);
+			newRigidbody.AddForce (((target.transform.position - transform.position).normalized + Vector3.up) * power);
+
+            if (target.collider.GetComponent<Bomb>() != null)
+                target.collider.GetComponent<Bomb>().trigger();
 		}
 
+
+        Destroy(Instantiate(explosion, this.transform.position, this.transform.rotation),5);
+
 		Destroy (this.gameObject);
+
+
 
 	}
 }

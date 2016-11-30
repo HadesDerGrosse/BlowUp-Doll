@@ -60,7 +60,12 @@ public class PlayerPhysic : MonoBehaviour {
 		}
 
         else
+        {
+            if(transform.parent != null && transform.parent.GetComponent<Rigidbody2D>() != null)
+                currentVelocity += transform.parent.GetComponent<Rigidbody2D>().velocity;
             this.transform.parent = null;
+
+        }
 
 
 
@@ -140,15 +145,15 @@ public class PlayerPhysic : MonoBehaviour {
 
 	private void checkLeftCollision(){
 
-		Debug.DrawRay(transform.position + new Vector3(-0.4f,0.05f,0), Vector2.left *rayLenght);
+		Debug.DrawRay(transform.position + new Vector3(-0.4f,0.5f,0), Vector2.left *rayLenght);
 		Debug.DrawRay(transform.position + new Vector3(-0.4f,1.00f,0), Vector2.left *rayLenght);
-		Debug.DrawRay(transform.position + new Vector3(-0.4f,1.95f,0), Vector2.left *rayLenght);
+		Debug.DrawRay(transform.position + new Vector3(-0.4f,1.5f,0), Vector2.left *rayLenght);
 
-		characterHit = Physics2D.Raycast (transform.position + new Vector3(-0.4f,0.05f,0), Vector2.left, rayLenght, collidesWith);
+		characterHit = Physics2D.Raycast (transform.position + new Vector3(-0.4f,0.5f,0), Vector2.left, rayLenght, collidesWith);
 		if (characterHit.collider == null) {
 			characterHit = Physics2D.Raycast (transform.position+new Vector3(-0.4f,1.00f,0), Vector2.left, rayLenght,collidesWith);
 			if (characterHit.collider == null) {
-				characterHit = Physics2D.Raycast (transform.position+new Vector3(-0.4f,1.95f,0), Vector2.left, rayLenght,collidesWith);
+				characterHit = Physics2D.Raycast (transform.position+new Vector3(-0.4f,1.5f,0), Vector2.left, rayLenght,collidesWith);
 				if (characterHit.collider == null) {
 					hasCollisionLeft = false;
 					leftCollisionObject = null;
@@ -164,15 +169,15 @@ public class PlayerPhysic : MonoBehaviour {
 
 	private void checkCollisionRight(){
 
-		Debug.DrawRay(transform.position + new Vector3(0.4f,0.05f,0), Vector2.right *rayLenght);
+		Debug.DrawRay(transform.position + new Vector3(0.4f,0.5f,0), Vector2.right *rayLenght);
 		Debug.DrawRay(transform.position + new Vector3(0.4f,1f,0), Vector2.right *rayLenght);
-		Debug.DrawRay(transform.position + new Vector3(0.4f,1.95f,0), Vector2.right *rayLenght);
+		Debug.DrawRay(transform.position + new Vector3(0.4f,1.5f,0), Vector2.right *rayLenght);
 
-		characterHit = Physics2D.Raycast (transform.position + new Vector3(0.4f,0.05f,0), Vector2.right, rayLenght, collidesWith);
+		characterHit = Physics2D.Raycast (transform.position + new Vector3(0.4f,0.5f,0), Vector2.right, rayLenght, collidesWith);
 		if (characterHit.collider == null) {
 			characterHit = Physics2D.Raycast (transform.position+new Vector3(0.4f,1f,0), Vector2.right, rayLenght,collidesWith);
 			if (characterHit.collider == null) {
-				characterHit = Physics2D.Raycast (transform.position+new Vector3(0.4f,1.95f,0), Vector2.right, rayLenght,collidesWith);
+				characterHit = Physics2D.Raycast (transform.position+new Vector3(0.4f,1.5f,0), Vector2.right, rayLenght,collidesWith);
 				if (characterHit.collider == null) {
 					hasCollisionRight = false;
 					rightCollisionObject = null;

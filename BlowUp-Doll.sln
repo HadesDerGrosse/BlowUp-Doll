@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlowUp-Doll.CSharp.Plugins", "BlowUp-Doll.CSharp.Plugins.csproj", "{F89CD56A-8438-A73E-B01C-F6666F7070DF}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlowUp-Doll.CSharp", "BlowUp-Doll.CSharp.csproj", "{36096467-7B1C-045E-A9E2-AE201C01437F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlowUp-Doll.CSharp.Editor", "BlowUp-Doll.CSharp.Editor.csproj", "{2C0417A7-CC84-AC84-AB49-21FF345DEA1B}"
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F89CD56A-8438-A73E-B01C-F6666F7070DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F89CD56A-8438-A73E-B01C-F6666F7070DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F89CD56A-8438-A73E-B01C-F6666F7070DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F89CD56A-8438-A73E-B01C-F6666F7070DF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{36096467-7B1C-045E-A9E2-AE201C01437F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{36096467-7B1C-045E-A9E2-AE201C01437F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36096467-7B1C-045E-A9E2-AE201C01437F}.Release|Any CPU.ActiveCfg = Release|Any CPU
