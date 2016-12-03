@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="Assets\Logic\Bomb\Bomb.cs" />
     <Compile Include="Assets\Logic\Camera\CameraMovement.cs" />
+    <Compile Include="Assets\Logic\Camera\FakeParrallax.cs" />
     <Compile Include="Assets\Logic\Level\GameManager.cs" />
     <Compile Include="Assets\Logic\Level\LevelEnder.cs" />
     <Compile Include="Assets\Logic\Player\BombAwarer.cs" />

@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerAnimation : MonoBehaviour {
 
     public PlayerMovement move;
+    public PlayerPhysic phys;
     public Animator anim;
 
 	// Use this for initialization
@@ -44,5 +45,7 @@ public class PlayerAnimation : MonoBehaviour {
             || move.movementType == PlayerMovement.MovementTyps.FALL_LEFT
             || move.movementType == PlayerMovement.MovementTyps.FALL_RIGHT)
             );
+
+        anim.SetFloat("xVel", Mathf.Abs(phys.Velocity.x));
 	}
 }
