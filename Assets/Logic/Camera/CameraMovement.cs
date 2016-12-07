@@ -27,6 +27,9 @@ public class CameraMovement : MonoBehaviour {
 
 	public Vector3 getAveragePlayerPosition(){
 
+		if (players [0] == null)
+			return this.transform.position;
+
 		Vector3 position = new Vector3 ();
 
 		foreach (GameObject player in players) {

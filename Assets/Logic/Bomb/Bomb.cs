@@ -27,7 +27,7 @@ public class Bomb : MonoBehaviour {
 		if (!isExploded) {
             StartCoroutine(Wait(delay * Time.timeScale));
 
-            this.GetComponent<Animator>().SetTrigger("trigger");
+			this.GetComponentInChildren<Animator>().SetTrigger("trigger");
             isExploded = true;
 		}
 	}
@@ -51,7 +51,7 @@ public class Bomb : MonoBehaviour {
 				target.collider.GetComponent<Rigidbody2D>();
 			
 			newRigidbody.freezeRotation = true;
-			newRigidbody.AddForce (((target.transform.position - transform.position).normalized + Vector3.up) * power);
+			newRigidbody.AddForce (((target.transform.position - transform.position).normalized + Vector3.up) * power * 4);
 
             if (target.collider.GetComponent<Bomb>() != null)
                 target.collider.GetComponent<Bomb>().trigger();

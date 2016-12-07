@@ -49,6 +49,10 @@ public class GameManager : MonoBehaviour {
         endGame(won);
     }
 
+	public void QuitGame(){
+		Application.Quit();
+	}
+
     void OnDestroy()
     {
         startGame = null;

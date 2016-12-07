@@ -210,6 +210,18 @@ public class PlayerPhysic : MonoBehaviour {
 			}
 		}
 
+		if (characterHit.collider.GetComponent<Rigidbody2D> ()!= null) {
+			hasCollisionTop = false;
+			topCollisionObject = null;
+			return;
+		}
+
+		if (hasCollisionBottom && bottomCollisionObject.GetComponent<Rigidbody2D> () !=null) {
+			hasCollisionBottom = false;
+			bottomCollisionObject = null;
+			return;
+		}
+
 		hasCollisionTop = true;
 		topCollisionObject = characterHit.collider.gameObject;
 	}
